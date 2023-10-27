@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV File Comparison</title>
+</head>
+<body>
+    <h1>CSV File Comparison</h1>
+    <p>Main File Path: {{ main_file_path }}</p>
+    <p>Temp File Path: {{ temp_file_path }}</p>
+    {% if result %}
+        <p>All event_id from temp_file are present in main_file.</p>
+    {% else %}
+        <p>Not all event_id from temp_file are present in main_file.</p>
+    {% endif %}
+    <p>Result: {{ result }}</p>
+</body>
+</html>
