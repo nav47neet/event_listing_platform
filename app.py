@@ -35,7 +35,7 @@ def combine_and_store_data():
 
     # Read basketball data from JSON file
     basketball_data = []
-    with open("basketball_events_custom.json", "r") as json_file:
+    with open("basketball_data.json", "r") as json_file:
         basketball_data = json.load(json_file)
 
     # Establish a connection to the MySQL database
@@ -50,6 +50,12 @@ def combine_and_store_data():
     cursor.execute(create_table_query)
     conn.commit()
 
+
+    # Clear existing records in the events table
+    clear_table_query = "DELETE FROM events"
+    cursor.execute(clear_table_query)
+    conn.commit()
+    
     # Insert football data into the database
     for football_event in football_data:
         insert_query = "INSERT INTO events (event_id, event_name, event_date, event_location, event_description, event_category) VALUES (%s, %s, %s, %s, %s, %s)"
