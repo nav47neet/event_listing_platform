@@ -3,17 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSV File Comparison</title>
+    <title>File Comparison</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .comparison-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 80%;
+            position: relative;
+        }
+
+        .comparison-section {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .partition-line {
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: #ccc;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>CSV File Comparison</h1>
-    <p>Main File Path: {{ main_file_path }}</p>
-    <p>Temp File Path: {{ temp_file_path }}</p>
-    {% if result %}
-        <p>All event_id from temp_file are present in main_file.</p>
-    {% else %}
-        <p>Not all event_id from temp_file are present in main_file.</p>
-    {% endif %}
-    <p>Result: {{ result }}</p>
+    <h1 class="heading">File Comparison</h1>
+    
+    <div class="comparison-container">
+        <div class="comparison-section">
+            <h2>Football Comparison</h2>
+            <p>Football Main File Path: {{ football_main_file_path }}</p>
+            <p>Football Temp File Path: {{ football_temp_file_path }}</p>
+            {% if football_result %}
+                <p>All event_id from {{football_temp_file_path}} are present in {{football_main_file_path}}.</p>
+            {% else %}
+                <p>Not all event_id from {{football_temp_file_path}} are present in {{football_main_file_path}}.</p>
+            {% endif %}
+            <p>Football Result: {{ football_result }}</p>
+        </div>
+
+        <div class="partition-line"></div>
+
+        <div class="comparison-section" style="margin-left: 30%;">
+            <h2>Basketball Comparison</h2>
+            <p>Basketball Main File Path: {{ basketball_main_file_path }}</p>
+            <p>Basketball Temp File Path: {{ basketball_temp_file_path }}</p>
+            {% if basketball_result %}
+                <p>All event_id_custom from {{basketball_temp_file_path}} are present in {{basketball_main_file_path}}.</p>
+            {% else %}
+                <p>Not all event_id_custom from {{basketball_temp_file_path}} are present in {{basketball_main_file_path}}.</p>
+            {% endif %}
+            <p>Basketball Result: {{ basketball_result }}</p>
+        </div>
+    </div>
 </body>
 </html>
