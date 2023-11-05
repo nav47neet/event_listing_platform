@@ -110,11 +110,14 @@ def compare_event_ids_csv(main_file_path, temp_file_path):
     main_file = pd.read_csv(main_file_path)
     temp_file = pd.read_csv(temp_file_path)
 
-    # Check if all event_id from temp_file are in main_file
-    all_event_ids_present = temp_file['event_id'].isin(main_file['event_id']).all()
-    if all_event_ids_present is False:
+    # Find differences in event IDs
+    differences = set(temp_file['event_id']).symmetric_difference(set(main_file['event_id']))
+
+    if differences:
         shutil.copyfile(main_file_path, temp_file_path)
-    return all_event_ids_present
+
+    return not bool(differences)
+
 
 
 @app.route("/")
@@ -140,5 +143,7 @@ def index():
                            basketball_result=result_basketball)
 
 
-
-app.run(debug=True)
+@app.route('/favicon.ico')
+def favicon():
+    return jsonify({"message": "No favicon here!"})
+app.run(debug=True,port = 8990)
