@@ -12,9 +12,18 @@
     <form method="post" action="{{ url_for('filter_events') }}">
         <label for="category">Select Category:</label>
         <select name="category" id="category">
+            <option value="None">None</option>
             <option value="Football">Football</option>
             <option value="Basketball">Basketball</option>
             <!-- Add more options for other categories if needed -->
+        </select>
+
+        <label for="location">Select Location:</label>
+        <select name="location" id="location">
+            <option value="None">None</option>
+            {% for location in locations %}
+                <option value="{{ location }}">{{ location }}</option>
+            {% endfor %}
         </select>
 
         <label for="start_date">Start Date:</label>
@@ -28,7 +37,7 @@
 
     <table border="1">
         <tr>
-            <th>Event ID</th>
+            <th>Serial Number</th>
             <th>Event Name</th>
             <th>Event Date</th>
             <th>Event Location</th>
@@ -37,7 +46,7 @@
         </tr>
         {% for event in events_data %}
         <tr>
-            <td>{{ event[0] }}</td>
+            <td>{{ loop.index }}</td>
             <td>{{ event[1] }}</td>
             <td>{{ event[2] }}</td>
             <td>{{ event[3] }}</td>

@@ -88,7 +88,19 @@ def combine_and_store_data():
     # Close the database connection
     cursor.close()
     conn.close()
+def get_locations():
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
 
+    # Assuming your locations are stored in a 'locations' table
+    select_locations_query = "SELECT DISTINCT event_location FROM events"
+    cursor.execute(select_locations_query)
+    locations = [location[0] for location in cursor.fetchall()]
+
+    cursor.close()
+    conn.close()
+
+    return locations
 def compare_event_ids_json(main_file_path, temp_file_path):
     # Load JSON files
     with open(main_file_path, 'r') as main_file:
@@ -126,6 +138,7 @@ def filter_events():
 
     # Get filter parameters from the form
     selected_category = request.form.get("category")
+    selected_location = request.form.get("location")
     start_date_str = request.form.get("start_date")
     end_date_str = request.form.get("end_date")
 
@@ -134,8 +147,16 @@ def filter_events():
     end_date = datetime.strptime(end_date_str, "%Y-%m-%d") if end_date_str else None
 
     # Build the SQL query based on filter parameters
-    select_query = "SELECT * FROM events WHERE event_category = %s"
-    params = [selected_category]
+    select_query = "SELECT * FROM events WHERE 1=1"
+    params = []
+
+    if selected_category and selected_category != "None":
+        select_query += " AND event_category = %s"
+        params.append(selected_category)
+
+    if selected_location and selected_location != "None":
+        select_query += " AND event_location = %s"
+        params.append(selected_location)
 
     if start_date:
         select_query += " AND event_date >= %s"
@@ -143,7 +164,8 @@ def filter_events():
 
     if end_date:
         select_query += " AND event_date <= %s"
-        params.append(end_date)
+        # Increment the end_date by one day to include events on the end_date
+        params.append(end_date + timedelta(days=1))
 
     # Execute the SQL query
     cursor.execute(select_query, tuple(params))
@@ -153,13 +175,24 @@ def filter_events():
     cursor.close()
     conn.close()
 
+    # Get locations for the dropdown menu
+    locations = get_locations()
+
     # Generate date options for the dropdown menu
     today = datetime.today()
     date_options = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(30)]
 
-    # Pass the filtered data, filter parameters, and date options to the template
-    return render_template('index.html', events_data=filtered_events_data, selected_category=selected_category, date_options=date_options, start_date=start_date_str, end_date=end_date_str)
-
+    # Pass the filtered data, filter parameters, date options, and locations to the template
+    return render_template(
+        'index.html',
+        events_data=filtered_events_data,
+        selected_category=selected_category,
+        selected_location=selected_location,
+        date_options=date_options,
+        start_date=start_date_str,
+        end_date=end_date_str,
+        locations=locations
+    )
 @app.route("/events")
 def show_events():
     # Connect to the database
@@ -175,9 +208,11 @@ def show_events():
     cursor.close()
     conn.close()
 
-    # Pass the data to the template
-    return render_template('index.html', events_data=events_data)
+    # Get locations for the dropdown menu
+    locations = get_locations()
 
+    # Pass the data and locations to the template
+    return render_template('index.html', events_data=events_data, locations=locations)
 
 
 @app.route("/")
@@ -197,7 +232,7 @@ def index():
     today = datetime.today()
     date_options = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(30)]
 
-    return render_template('index.html', events_data=[], selected_category=None, date_options=date_options)
+    return render_template('index.html', events_data=[], selected_category=None, date_options=date_options, locations=locations)
 
 
 
