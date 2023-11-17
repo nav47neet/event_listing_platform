@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template
+from flask import Flask,request,render_template,redirect
 import json
 import csv
 import pandas as pd
@@ -6,15 +6,15 @@ import shutil
 from deepdiff import DeepDiff
 import mysql.connector
 
+    # Define the MySQL database connection parameters
+db_config = {
+    "host": "localhost",
+    "user": "root",
+    "password": "changeme",
+    "database": "demo_db",
+}
 app = Flask(__name__)
 def combine_and_store_data():
-    # Define the MySQL database connection parameters
-    db_config = {
-        "host": "localhost",
-        "user": "root",
-        "password": "changeme",
-        "database": "demo_db",
-    }
 
     # Define the global schema for the combined data
     global_schema = {
@@ -117,6 +117,23 @@ def compare_event_ids_csv(main_file_path, temp_file_path):
         shutil.copyfile(main_file_path, temp_file_path)
 
     return not bool(differences)
+@app.route("/events")
+def show_events():
+    # Connect to the database
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+
+    # Fetch data from the events table
+    select_query = "SELECT * FROM events"
+    cursor.execute(select_query)
+    events_data = cursor.fetchall()
+
+    # Close the database connection
+    cursor.close()
+    conn.close()
+
+    # Pass the data to the template
+    return render_template('index.html', events_data=events_data)
 
 
 
@@ -134,13 +151,7 @@ def index():
     if result_basketball is False or result_football is False:
         combine_and_store_data()
     
-    return render_template('index.html', 
-                           football_main_file_path=main_file_path_f, 
-                           football_temp_file_path=temp_file_path_f, 
-                           football_result=result_football,
-                           basketball_main_file_path=main_file_path_b,
-                           basketball_temp_file_path=temp_file_path_b,
-                           basketball_result=result_basketball)
+    return redirect("/events")
 
 
 @app.route('/favicon.ico')

@@ -1,51 +1,28 @@
 event_id,event_name,event_date,event_location,event_description,event_category
-1a12cf8d-2d01-4467-b25a-5f1de2a26525,Manchester City vs Arsenal Football Match,45355.45096,West Robert,Manchester City goes head-to-head with Arsenal in a legendary football match!,Football
-1cfffe79-d366-4e8c-9eee-98b61201d17e,AC Milan vs Liverpool Football Match,24-08-2024 22:53,Port Brian,Be part of the excitement as AC Milan challenges Liverpool for football supremacy.,Football
-a801d6ae-3c72-4c27-a2e4-74e17beb53d2,Liverpool vs Liverpool Football Match,16-02-2024 03:13,Port Garrettburgh,Watch the action unfold as Liverpool competes against Liverpool for football glory!,Football
-e1b6a177-673d-4a33-b129-c31449305d2b,Manchester United vs Manchester United Football Match,22-06-2024 23:39,Cruzhaven,Experience the intensity as Manchester United clashes with Manchester United in a football showdown!,Football
-58237cf4-7f8a-4bce-8dbe-c2e3bf873b4d,Chelsea vs Arsenal Football Match,16-06-2023 02:20,New Melaniefurt,Chelsea takes on Arsenal in a high-stakes football match.,Football
-17ed5f16-3b09-4a25-8959-9e70d514ae66,Inter Milan vs Borussia Dortmund Football Match,11-03-2024 23:41,East Rachelshire,Inter Milan and Borussia Dortmund face off in a fierce football battle!,Football
-093643e0-0ad8-43d4-9dda-67c1049e204b,Barcelona vs Real Madrid Football Match,26-01-2023 08:32,Joelville,Barcelona and Real Madrid meet for an unforgettable football match!,Football
-231ed526-c342-48fa-8b19-7f911cad28f4,Manchester City vs Atletico Madrid Football Match,11-11-2023 23:56,Jeffersonview,"Cheer for your favorite team, Manchester City or Atletico Madrid, as they compete in an exciting game!",Football
-c22bca1b-058f-4bb9-9cbc-72adb9b690e1,Barcelona vs Real Madrid Football Match,04-05-2024 00:48,Heidihaven,"Cheer for your favorite team, Barcelona or Real Madrid, as they compete in an exciting game!",Football
-d6ce42e0-d489-4ad8-bb00-185b09e59419,AC Milan vs Bayern Munich Football Match,16-12-2023 03:25,Nicholasview,Experience the intensity as AC Milan clashes with Bayern Munich in a football showdown!,Football
-e947c874-c961-4753-bff7-42e9ab154778,Chelsea vs Liverpool Football Match,01-10-2024 09:37,South Adam,Watch the action unfold as Chelsea competes against Liverpool for football glory!,Football
-c368adcc-fca7-4838-9607-3ce47717799c,Inter Milan vs Manchester United Football Match,29-01-2023 18:10,Olsenchester,Inter Milan takes on Manchester United in a high-stakes football match.,Football
-76d8ebde-385d-4480-8ea8-7891bf701d0e,Inter Milan vs Bayern Munich Football Match,16-10-2022 03:01,Kathleenchester,Watch the action unfold as Inter Milan competes against Bayern Munich for football glory!,Football
-d2d1439f-60ef-455e-8819-31b7e6e6d494,Manchester City vs Real Madrid Football Match,03-12-2023 04:33,Ortizmouth,"Cheer for your favorite team, Manchester City or Real Madrid, as they compete in an exciting game!",Football
-20ce9856-0fa0-48ea-a4e1-155f9816a8ff,Chelsea vs Real Madrid Football Match,12-05-2023 07:09,Thompsonfort,Chelsea goes head-to-head with Real Madrid in a legendary football match!,Football
-cb6888f0-6306-4dcc-a06f-cdb0eccd547d,AC Milan vs Manchester United Football Match,16-09-2024 10:33,Jessicaside,Watch the action unfold as AC Milan competes against Manchester United for football glory!,Football
-2d9f535b-e038-4121-bc94-03ea6dd2ba41,AC Milan vs Juventus Football Match,01-01-2023 07:43,Lake Christopherton,AC Milan takes on Juventus in a high-stakes football match.,Football
-596457cc-a818-497a-ae97-dc671b82ee16,Manchester United vs Juventus Football Match,21-06-2024 23:35,Richardbury,Experience the intensity as Manchester United clashes with Juventus in a football showdown!,Football
-b676b64e-0b40-4113-98cf-7b7811d02ef9,Paris Saint-Germain vs Tottenham Hotspur Football Match,10-02-2023 06:50,Craigfurt,Paris Saint-Germain and Tottenham Hotspur meet for an unforgettable football match!,Football
-80f492a7-4e7c-45c3-a6d5-fa977ad2e6ab,Real Madrid vs Atletico Madrid Football Match,30-04-2023 04:23,East Seanstad,Real Madrid and Atletico Madrid meet for an unforgettable football match!,Football
-b55bcc91-fc8e-423e-bf72-d6319e8cc585,Manchester City vs Liverpool Football Match,11-02-2023 14:20,Farmerberg,Manchester City goes head-to-head with Liverpool in a legendary football match!,Football
-aecdc271-8842-4d73-8b51-72939047b17c,Inter Milan vs Tottenham Hotspur Football Match,25-10-2023 04:14,Hendersonberg,"Cheer for your favorite team, Inter Milan or Tottenham Hotspur, as they compete in an exciting game!",Football
-41eecf96-464b-4d0c-a1fd-45ef7b91f61c,Chelsea vs Liverpool Football Match,04-09-2024 11:30,Silvafurt,Experience the intensity as Chelsea clashes with Liverpool in a football showdown!,Football
-b1cb4ab5-7c99-4637-b369-fa39b8d8121f,Real Madrid vs Bayern Munich Football Match,20-07-2024 14:27,Lake Tina,Real Madrid and Bayern Munich face off in a fierce football battle!,Football
-abb01fd1-889b-490c-84b7-02d161e8069d,Manchester City vs Liverpool Football Match,07-02-2023 11:14,Wuburgh,Manchester City and Liverpool meet for an unforgettable football match!,Football
-6cf6c7ab-35ca-4424-8eef-890e26f93806,Liverpool vs Chelsea Football Match,27-10-2022 13:03,Gutierrezburgh,"Cheer for your favorite team, Liverpool or Chelsea, as they compete in an exciting game!",Football
-83f3fd84-eea6-49e8-90de-c3a11c42c25c,Inter Milan vs Chelsea Football Match,05-12-2023 23:07,Johnchester,Don't miss this epic showdown between Inter Milan and Chelsea on the football field!,Football
-1ebde35b-d36a-4743-801b-0449351b7ab4,AC Milan vs Juventus Football Match,06-08-2024 15:50,New Brianfurt,Don't miss this epic showdown between AC Milan and Juventus on the football field!,Football
-b3d9c157-2f85-4197-ad9d-2949da1ca3f6,Bayern Munich vs Real Madrid Football Match,16-11-2023 13:51,Matthewchester,Watch the action unfold as Bayern Munich competes against Real Madrid for football glory!,Football
-a6a2051d-b261-404c-a3d8-8d5ef48b1e41,Manchester United vs Chelsea Football Match,03-07-2024 15:28,New Valerieport,Manchester United and Chelsea meet for an unforgettable football match!,Football
-fe81445c-3b2e-4b26-adc1-5afcc885e40e,Manchester City vs Atletico Madrid Football Match,14-02-2024 07:50,Gutierrezland,Don't miss this epic showdown between Manchester City and Atletico Madrid on the football field!,Football
-f14eabdc-bf80-4ee4-8f6e-4d1edfb0e4d4,Manchester City vs Borussia Dortmund Football Match,19-11-2023 17:38,Michelleton,Experience the intensity as Manchester City clashes with Borussia Dortmund in a football showdown!,Football
-2ce6343b-e0f1-4083-ac42-8a289649aca9,Liverpool vs Bayern Munich Football Match,22-09-2023 05:44,Booneborough,Don't miss this epic showdown between Liverpool and Bayern Munich on the football field!,Football
-b48e2721-60bc-40ee-b9a8-c6704998a112,Inter Milan vs Liverpool Football Match,15-02-2024 08:25,Christinefort,Inter Milan takes on Liverpool in a high-stakes football match.,Football
-2fd7d2eb-c57a-471d-8685-c22750b9d6d5,Chelsea vs Borussia Dortmund Football Match,15-07-2023 01:55,Garybury,Chelsea and Borussia Dortmund face off in a fierce football battle!,Football
-4a0ea76c-48c9-4474-a347-3f56e770b942,Liverpool vs Manchester United Football Match,10-12-2022 14:51,Jonathanstad,Liverpool and Manchester United meet for an unforgettable football match!,Football
-e0358427-40cb-448f-9310-b2f1a0a24b69,Real Madrid vs Arsenal Football Match,20-05-2024 06:24,Port Christopherview,Witness the clash between Real Madrid and Arsenal in this thrilling football match!,Football
-9dd2e147-1ae7-48c0-8211-5c6573d3d422,Real Madrid vs Manchester United Football Match,12-06-2023 03:57,Nguyenton,Watch the action unfold as Real Madrid competes against Manchester United for football glory!,Football
-e3482860-5e25-4450-bc18-581967741eba,Barcelona vs Atletico Madrid Football Match,01-02-2023 19:18,Johnsonton,Barcelona goes head-to-head with Atletico Madrid in a legendary football match!,Football
-a41ec28c-03bf-47ed-8af8-6f7962dc8f0e,Real Madrid vs Tottenham Hotspur Football Match,26-09-2023 23:19,New Jacob,Watch the action unfold as Real Madrid competes against Tottenham Hotspur for football glory!,Football
-332ba047-aa93-4540-9672-d25e3b3b6807,Manchester United vs Liverpool Football Match,28-02-2023 14:54,Lake Amy,Be part of the excitement as Manchester United challenges Liverpool for football supremacy.,Football
-e8a6a87c-ae48-46a6-b6fb-c0b08748ae21,Bayern Munich vs Tottenham Hotspur Football Match,16-01-2024 21:55,Jonathanstad,Bayern Munich goes head-to-head with Tottenham Hotspur in a legendary football match!,Football
-b4b10e77-09ef-4827-8ad3-6a0aa7cf9e3c,Inter Milan vs Chelsea Football Match,07-02-2024 02:33,Port Cherylbury,Watch the action unfold as Inter Milan competes against Chelsea for football glory!,Football
-981a3037-089e-49ae-a323-755dfe3b9ddf,Chelsea vs Chelsea Football Match,02-05-2023 11:51,North Stephanie,Watch the action unfold as Chelsea competes against Chelsea for football glory!,Football
-45489afc-f55f-4567-9743-03df0cead5a6,Bayern Munich vs Manchester United Football Match,01-03-2024 15:00,Lake Sarahview,Witness the clash between Bayern Munich and Manchester United in this thrilling football match!,Football
-7f18fdf2-2729-4f84-8d00-1d4c2eaa1a75,Paris Saint-Germain vs Real Madrid Football Match,18-06-2023 02:33,Elizabethborough,Paris Saint-Germain and Real Madrid meet for an unforgettable football match!,Football
-3a1bd964-a3de-41ad-8276-0ceb51f56837,Manchester City vs Manchester United Football Match,29-03-2023 03:33,West Travis,"Cheer for your favorite team, Manchester City or Manchester United, as they compete in an exciting game!",Football
-65dbfc83-7fc4-4294-9a52-8ee6a5779af1,Real Madrid vs Arsenal Football Match,23-10-2023 01:17,Lake Ernestberg,Watch the action unfold as Real Madrid competes against Arsenal for football glory!,Football
-49bb0d59-ab7e-428d-b14d-2fa045f53399,AC Milan vs Liverpool Football Match,02-04-2023 20:36,Huangfort,AC Milan and Liverpool face off in a fierce football battle!,Football
-3e5ba3c5-6d74-4468-8770-3dc4a29961eb,Bayern Munich vs Real Madrid Football Match,29-07-2023 21:17,Kingville,Bayern Munich takes on Real Madrid in a high-stakes football match.,Football
+1a12cf8d-2d01-4467-b25a-5f1de2a26525,Manchester City vs Arsenal Football Match,2024-03-04 10:49:23,West Robert,Manchester City goes head-to-head with Arsenal in a legendary football match!,Football
+e1b6a177-673d-4a33-b129-c31449305d2b,Manchester United vs Manchester United Football Match,2024-06-22 23:39:02,Cruzhaven,Experience the intensity as Manchester United clashes with Manchester United in a football showdown!,Football
+58237cf4-7f8a-4bce-8dbe-c2e3bf873b4d,Chelsea vs Arsenal Football Match,2023-06-16 02:20:34,New Melaniefurt,Chelsea takes on Arsenal in a high-stakes football match.,Football
+b676b64e-0b40-4113-98cf-7b7811d02ef9,Paris Saint-Germain vs Tottenham Hotspur Football Match,2023-02-10 06:50:27,Craigfurt,Paris Saint-Germain and Tottenham Hotspur meet for an unforgettable football match!,Football
+80f492a7-4e7c-45c3-a6d5-fa977ad2e6ab,Real Madrid vs Atletico Madrid Football Match,2023-04-30 04:23:14,East Seanstad,Real Madrid and Atletico Madrid meet for an unforgettable football match!,Football
+b55bcc91-fc8e-423e-bf72-d6319e8cc585,Manchester City vs Liverpool Football Match,2023-02-11 14:20:01,Farmerberg,Manchester City goes head-to-head with Liverpool in a legendary football match!,Football
+aecdc271-8842-4d73-8b51-72939047b17c,Inter Milan vs Tottenham Hotspur Football Match,2023-10-25 04:14:13,Hendersonberg,"Cheer for your favorite team, Inter Milan or Tottenham Hotspur, as they compete in an exciting game!",Football
+41eecf96-464b-4d0c-a1fd-45ef7b91f61c,Chelsea vs Liverpool Football Match,2024-09-04 11:30:32,Silvafurt,Experience the intensity as Chelsea clashes with Liverpool in a football showdown!,Football
+b1cb4ab5-7c99-4637-b369-fa39b8d8121f,Real Madrid vs Bayern Munich Football Match,2024-07-20 14:27:43,Lake Tina,Real Madrid and Bayern Munich face off in a fierce football battle!,Football
+abb01fd1-889b-490c-84b7-02d161e8069d,Manchester City vs Liverpool Football Match,2023-02-07 11:14:10,Wuburgh,Manchester City and Liverpool meet for an unforgettable football match!,Football
+6cf6c7ab-35ca-4424-8eef-890e26f93806,Liverpool vs Chelsea Football Match,2022-10-27 13:03:11,Gutierrezburgh,"Cheer for your favorite team, Liverpool or Chelsea, as they compete in an exciting game!",Football
+83f3fd84-eea6-49e8-90de-c3a11c42c25c,Inter Milan vs Chelsea Football Match,2023-12-05 23:07:37,Johnchester,Don't miss this epic showdown between Inter Milan and Chelsea on the football field!,Football
+1ebde35b-d36a-4743-801b-0449351b7ab4,AC Milan vs Juventus Football Match,2024-08-06 15:50:08,New Brianfurt,Don't miss this epic showdown between AC Milan and Juventus on the football field!,Football
+b3d9c157-2f85-4197-ad9d-2949da1ca3f6,Bayern Munich vs Real Madrid Football Match,2023-11-16 13:51:01,Matthewchester,Watch the action unfold as Bayern Munich competes against Real Madrid for football glory!,Football
+a6a2051d-b261-404c-a3d8-8d5ef48b1e41,Manchester United vs Chelsea Football Match,2024-07-03 15:28:38,New Valerieport,Manchester United and Chelsea meet for an unforgettable football match!,Football
+fe81445c-3b2e-4b26-adc1-5afcc885e40e,Manchester City vs Atletico Madrid Football Match,2024-02-14 07:50:19,Gutierrezland,Don't miss this epic showdown between Manchester City and Atletico Madrid on the football field!,Football
+f14eabdc-bf80-4ee4-8f6e-4d1edfb0e4d4,Manchester City vs Borussia Dortmund Football Match,2023-11-19 17:38:27,Michelleton,Experience the intensity as Manchester City clashes with Borussia Dortmund in a football showdown!,Football
+2ce6343b-e0f1-4083-ac42-8a289649aca9,Liverpool vs Bayern Munich Football Match,2023-09-22 05:44:32,Booneborough,Don't miss this epic showdown between Liverpool and Bayern Munich on the football field!,Football
+b48e2721-60bc-40ee-b9a8-c6704998a112,Inter Milan vs Liverpool Football Match,2024-02-15 08:25:03,Christinefort,Inter Milan takes on Liverpool in a high-stakes football match.,Football
+2fd7d2eb-c57a-471d-8685-c22750b9d6d5,Chelsea vs Borussia Dortmund Football Match,2023-07-15 01:55:49,Garybury,Chelsea and Borussia Dortmund face off in a fierce football battle!,Football
+4a0ea76c-48c9-4474-a347-3f56e770b942,Liverpool vs Manchester United Football Match,2022-12-10 14:51:12,Jonathanstad,Liverpool and Manchester United meet for an unforgettable football match!,Football
+e0358427-40cb-448f-9310-b2f1a0a24b69,Real Madrid vs Arsenal Football Match,2024-05-20 06:24:27,Port Christopherview,Witness the clash between Real Madrid and Arsenal in this thrilling football match!,Football
+9dd2e147-1ae7-48c0-8211-5c6573d3d422,Real Madrid vs Manchester United Football Match,2023-06-12 03:57:48,Nguyenton,Watch the action unfold as Real Madrid competes against Manchester United for football glory!,Football
+e3482860-5e25-4450-bc18-581967741eba,Barcelona vs Atletico Madrid Football Match,2023-02-01 19:18:46,Johnsonton,Barcelona goes head-to-head with Atletico Madrid in a legendary football match!,Football
+a41ec28c-03bf-47ed-8af8-6f7962dc8f0e,Real Madrid vs Tottenham Hotspur Football Match,2023-09-26 23:19:19,New Jacob,Watch the action unfold as Real Madrid competes against Tottenham Hotspur for football glory!,Football
+
+
