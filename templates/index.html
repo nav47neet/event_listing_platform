@@ -8,6 +8,17 @@
 </head>
 <body>
     <h1>Events</h1>
+
+    <form method="post" action="{{ url_for('filter_events') }}">
+        <label for="category">Select Category:</label>
+        <select name="category" id="category">
+            <option value="Football">Football</option>
+            <option value="Basketball">Basketball</option>
+            <!-- Add more options for other categories if needed -->
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
     <table border="1">
         <tr>
             <th>Event ID</th>

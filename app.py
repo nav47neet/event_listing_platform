@@ -117,6 +117,26 @@ def compare_event_ids_csv(main_file_path, temp_file_path):
         shutil.copyfile(main_file_path, temp_file_path)
 
     return not bool(differences)
+@app.route("/filter_events", methods=["POST"])
+def filter_events():
+    # Connect to the database
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+
+    # Get the selected category from the form
+    selected_category = request.form.get("category")
+
+    # Fetch filtered data from the events table based on category
+    select_query = "SELECT * FROM events WHERE event_category = %s"
+    cursor.execute(select_query, (selected_category,))
+    filtered_events_data = cursor.fetchall()
+
+    # Close the database connection
+    cursor.close()
+    conn.close()
+
+    # Pass the filtered data and selected category to the template
+    return render_template('index.html', events_data=filtered_events_data, selected_category=selected_category)
 @app.route("/events")
 def show_events():
     # Connect to the database
@@ -151,7 +171,7 @@ def index():
     if result_basketball is False or result_football is False:
         combine_and_store_data()
     
-    return redirect("/events")
+    return render_template('index.html', events_data=[], selected_category=None)
 
 
 @app.route('/favicon.ico')
