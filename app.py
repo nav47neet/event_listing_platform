@@ -5,6 +5,7 @@ import pandas as pd
 import shutil
 from deepdiff import DeepDiff
 import mysql.connector
+from datetime import datetime, timedelta
 
     # Define the MySQL database connection parameters
 db_config = {
@@ -123,20 +124,42 @@ def filter_events():
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
 
-    # Get the selected category from the form
+    # Get filter parameters from the form
     selected_category = request.form.get("category")
+    start_date_str = request.form.get("start_date")
+    end_date_str = request.form.get("end_date")
 
-    # Fetch filtered data from the events table based on category
+    # Convert date strings to datetime objects
+    start_date = datetime.strptime(start_date_str, "%Y-%m-%d") if start_date_str else None
+    end_date = datetime.strptime(end_date_str, "%Y-%m-%d") if end_date_str else None
+
+    # Build the SQL query based on filter parameters
     select_query = "SELECT * FROM events WHERE event_category = %s"
-    cursor.execute(select_query, (selected_category,))
+    params = [selected_category]
+
+    if start_date:
+        select_query += " AND event_date >= %s"
+        params.append(start_date)
+
+    if end_date:
+        select_query += " AND event_date <= %s"
+        params.append(end_date)
+
+    # Execute the SQL query
+    cursor.execute(select_query, tuple(params))
     filtered_events_data = cursor.fetchall()
 
     # Close the database connection
     cursor.close()
     conn.close()
 
-    # Pass the filtered data and selected category to the template
-    return render_template('index.html', events_data=filtered_events_data, selected_category=selected_category)
+    # Generate date options for the dropdown menu
+    today = datetime.today()
+    date_options = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(30)]
+
+    # Pass the filtered data, filter parameters, and date options to the template
+    return render_template('index.html', events_data=filtered_events_data, selected_category=selected_category, date_options=date_options, start_date=start_date_str, end_date=end_date_str)
+
 @app.route("/events")
 def show_events():
     # Connect to the database
@@ -171,7 +194,11 @@ def index():
     if result_basketball is False or result_football is False:
         combine_and_store_data()
     
-    return render_template('index.html', events_data=[], selected_category=None)
+    today = datetime.today()
+    date_options = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(30)]
+
+    return render_template('index.html', events_data=[], selected_category=None, date_options=date_options)
+
 
 
 @app.route('/favicon.ico')
