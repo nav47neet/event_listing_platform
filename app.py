@@ -6,6 +6,7 @@ import shutil
 from deepdiff import DeepDiff
 import mysql.connector
 from datetime import datetime, timedelta
+from fuzzywuzzy.process import fuzz, extractOne
 
     # Define the MySQL database connection parameters
 db_config = {
@@ -14,19 +15,67 @@ db_config = {
     "password": "changeme",
     "database": "demo_db",
 }
-app = Flask(__name__)
-def combine_and_store_data():
-
     # Define the global schema for the combined data
-    global_schema = {
-        "event_id": "CHAR(36)",
-        "event_name": "VARCHAR(255)",
-        "event_date": "DATETIME",
-        "event_location": "VARCHAR(255)",
-        "event_description": "TEXT",
-        "event_category": "VARCHAR(50)",
-    }
+global_schema = {
+    "event_id": "CHAR(36)",
+    "event_name": "VARCHAR(255)",
+    "event_date": "DATETIME",
+    "event_location": "VARCHAR(255)",
+    "event_description": "TEXT",
+    "event_category": "VARCHAR(50)",
+}
+app = Flask(__name__)
+df1 = pd.read_csv('concert_sports.csv')
+df2 = pd.read_csv('only_concert.csv')
+df1 = df1.rename(columns=global_schema)
+df2 = df2.rename(columns=global_schema)
+# Merging  the two DataFrames into a single DataFrame using an outer join
+global_df = pd.merge(df1, df2, how='outer')
 
+def fuzzy_merge(row):
+    e_name = row['event_name']
+    if pd.notna(e_name):  # Check if it's not NaN
+        matches = process.extractOne(e_name, global_df['event_name'].dropna())
+        if matches[1] >= 90:  # You can adjust the threshold as needed
+            return global_df[global_df['event_name'] == matches[0]]['event_id'].values[0]
+    return row['event_id']
+
+global_df['event_id'] = global_df.apply(fuzzy_merge, axis=1)
+def similarity_score(row1, row2):
+    e_name1 = str(row1['event_name']) if pd.notna(row1['event_name']) else ""
+    e_name2 = str(row2['event_name']) if pd.notna(row2['event_name']) else ""
+    event_place1 = str(row1['event_location']) if pd.notna(row1['event_location']) else ""
+    event_place2 = str(row2['event_location']) if pd.notna(row2['event_location']) else ""
+    
+    name_similarity = fuzz.ratio(e_name1, e_name2)
+    place_similarity = fuzz.ratio(event_place1, event_place2)
+    
+    # Standardize date formats to DD-MM-YYYY
+    def standardize_date(date_str):
+        if isinstance(date_str, str):
+            try:
+                date_obj = datetime.strptime(date_str, "%d/%m/%Y")
+                return date_obj.strftime("%d-%m-%Y")
+            except ValueError:
+                return None
+        return None
+
+    date1 = standardize_date(row1['event_date'])
+    date2 = standardize_date(row2['event_date'])
+    
+    if date1 is not None and date2 is not None:
+        date_similarity = 100 if date1 == date2 else 0
+    else:
+        date_similarity = 0
+    
+    return name_similarity, place_similarity, date_similarity
+global_df = global_df.drop_duplicates(subset=['event_id'])
+global_df.reset_index(drop=True, inplace=True)
+global_df = global_df.rename(columns={'event_category': 'Event_details', 'Unnamed: 6': 'event category'})
+global_df.to_csv('concert.csv', index=False)
+
+
+def combine_and_store_data():
     # Read football data from CSV file
     football_data = []
     with open("football_data.csv", "r") as csv_file:
@@ -45,8 +94,7 @@ def combine_and_store_data():
         csv_reader = csv.DictReader(csv_file2)
         for row in csv_reader:
             concert_data.append(row)
-    print("Concert Data:")
-    print(concert_data)
+
     # Establish a connection to the MySQL database
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
