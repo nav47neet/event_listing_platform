@@ -39,6 +39,14 @@ def combine_and_store_data():
     with open("basketball_data.json", "r") as json_file:
         basketball_data = json.load(json_file)
 
+    # Read concert data from CSV file
+    concert_data = []
+    with open("concert_data.csv", "r") as csv_file2:
+        csv_reader = csv.DictReader(csv_file2)
+        for row in csv_reader:
+            concert_data.append(row)
+    print("Concert Data:")
+    print(concert_data)
     # Establish a connection to the MySQL database
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
@@ -85,6 +93,21 @@ def combine_and_store_data():
         cursor.execute(insert_query, values)
     conn.commit()
 
+    #Insert concert data into databse
+    for concert_event in concert_data:
+        event_date = datetime.strptime(concert_event["event_date"], "%m/%d/%Y").strftime("%Y-%m-%d %H:%M:%S")
+        insert_query = "INSERT INTO events (event_id, event_name, event_date, event_location, event_description, event_category) VALUES (%s, %s, %s, %s, %s, %s)"
+        values = (
+            concert_event["e_id"],
+            concert_event["e_name"],
+            event_date,
+            concert_event["e_dest"],
+            concert_event["e_category"],
+            "Concert",
+        )
+        cursor.execute(insert_query, values)
+        conn.commit()
+
     # Close the database connection
     cursor.close()
     conn.close()
@@ -130,6 +153,19 @@ def compare_event_ids_csv(main_file_path, temp_file_path):
         shutil.copyfile(main_file_path, temp_file_path)
 
     return not bool(differences)
+def compare_e_ids_csv(main_file_path, temp_file_path):
+    # Load CSV files into pandas DataFrames
+    main_file = pd.read_csv(main_file_path)
+    temp_file = pd.read_csv(temp_file_path)
+
+    # Find differences in event IDs
+    differences = set(temp_file['e_id']).difference(set(main_file['e_id']))
+
+    if differences:
+        shutil.copyfile(main_file_path, temp_file_path)
+
+    return not bool(differences)
+
 @app.route("/filter_events", methods=["POST"])
 def filter_events():
     # Connect to the database
@@ -223,17 +259,21 @@ def index():
     main_file_path_b = 'basketball_data.json'
     temp_file_path_b = 'basketball_data_temp.json'
 
-    result_football = compare_event_ids_csv(main_file_path_f, temp_file_path_f)
-    result_basketball = compare_event_ids_json(main_file_path_b,temp_file_path_b)
+    main_file_path_c = 'concert_data.csv'
+    temp_file_path_c = 'concert_data_temp.csv'
 
-    if result_basketball is False or result_football is False:
-        combine_and_store_data()
-    
+    result_football = compare_event_ids_csv(main_file_path_f, temp_file_path_f)
+    result_basketball = compare_event_ids_json(main_file_path_b, temp_file_path_b)
+    result_concert = compare_e_ids_csv(main_file_path_c, temp_file_path_c)
+
+    #if result_basketball is False or result_football is False or result_concert is False:
+    combine_and_store_data()
+
     today = datetime.today()
     date_options = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(30)]
 
+    locations = get_locations()  # Add this line
     return render_template('index.html', events_data=[], selected_category=None, date_options=date_options, locations=locations)
-
 
 
 @app.route('/favicon.ico')
