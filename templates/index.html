@@ -92,10 +92,10 @@
 
     <button class="filter-btn" onclick="toggleFilters()">Show Filters</button>
 
-    <form method="post" action="{{ url_for('filter_events') }}">
+    <form method="post" action="{{ url_for('filter_events') }}" id="filterForm">
       <label for="category">Select Category:</label>
-      <select name="category" id="category">
-        <option value="None">None</option>
+      <select name="category" id="category" onchange="submitForm()">
+        <option value="None" {% if selected_category == 'None' %}selected{% endif %}>None</option>
         <option value="Football">Football</option>
         <option value="Basketball">Basketball</option>
         <option value="Concert">Concert</option>
@@ -139,11 +139,19 @@
       {% endfor %}
     </table>
 
+    <!-- ... (previous code) ... -->
+
     <script>
       function toggleFilters() {
         var form = document.querySelector("form");
         form.style.display = form.style.display === "none" ? "block" : "none";
       }
+    
+      function submitForm() {
+        document.getElementById("filterForm").submit();
+      }
     </script>
+
+    
   </body>
 </html>

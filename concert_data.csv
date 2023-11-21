@@ -1,4 +1,4 @@
-e_id,e_name,event_date,event_place,e_dest,Event_details
+e_id,e_name,event_date,event_place,e_dest,e_category
 7648,Taylor Swift Live in Concert,12-31-2023,Times Sq. ,Catch Taylor Swift live performing her new album,concert
 6584,Barcelona vs Real Madrid,11-23-2023,Camp Nou,Live action of El Cl?­sico,sports
 5432,Golden State Warriors vs Los Angeles Lakers,10-15-2023,Staples Center,Exciting NBA matchup between Warriors and Lakers,sports
@@ -65,6 +65,7 @@ e_id,e_name,event_date,event_place,e_dest,Event_details
 9863,Super Rugby Final,07-29-2023,Eden Park,The climax of Super Rugby,sports
 7841,"Bruno Mars ""24K Magic"" Tour",09-16-2023,BB&T Center,"Experience Bruno Mars' ""24K Magic"" tour",concert
 5439,Summer Paralympics Opening Ceremony,08-26-2023,Los Angeles Memorial Coliseum,The grand kickoff of the Summer Paralympics,sports
+5723,NBA Finals - Game 7,06-21-2023,Various Locations,The ultimate showdown for the NBA championship,sports
 2574,Shawn Mendes Live in Concert,11-18-2023,Staples Center,Don't miss Shawn Mendes' live performance,concert
 7432,MLB Opening Day,04-06-2023,Various Ballparks,The start of the MLB season with exciting games,sports
 5610,"The Who ""Moving On!"" Tour",10-14-2023,The Forum,"Experience The Who's ""Moving On!"" tour",concert
@@ -99,6 +100,7 @@ e_id,e_name,event_date,event_place,e_dest,Event_details
 2185,US Open Golf Championship,06-18-2023,Los Angeles Country Club,Witness golf's prestigious major,sports
 8573,"Shania Twain ""Let's Go!"" Tour",09-16-2023,T-Mobile Arena,"Get ready for Shania Twain's ""Let's Go!"" tour",concert
 3904,Summer Olympics Gymnastics,07-24-2023,Staples Center,The artistry of gymnastics at the Summer Olympics,sports
+4823,"The Rolling Stones ""No Filter"" Tour",09-02-2023,Arrowhead Stadium,Don't miss The Rolling Stones on tour,concert
 4283,Summer Paralympics Wheelchair Basketball,09-05-2023,LA Convention Center,Wheelchair basketball action at the Summer Paralympics,sports
 2186,MLB World Series - Game 1,10-17-2023,Various Locations,The start of the MLB World Series,sports
 7623,Ariana Grande Live in Concert,08-30-2023,Staples Center,Get ready for Ariana Grande's powerhouse performance,concert
@@ -116,16 +118,7 @@ e_id,e_name,event_date,event_place,e_dest,Event_details
 9785,Kacey Musgraves Live in Concert,11-17-2023,The Forum,Don't miss Kacey Musgraves' live performance,concert
 3297,Summer Paralympics Archery,09-07-2023,El Dorado Park,Archery competition at the Summer Paralympics,sports
 4385,UFC 276,08-19-2023,TD Garden,The top MMA fighters face off in UFC 276,sports
+4098,"Green Day ""Hella Mega"" Tour",11-05-2023,Hard Rock Stadium,Green Day,concert
 8724,Summer Olympics Synchronized Swimming,07-29-2023,Uytengsu Aquatics Center,Synchronized swimming at the Summer Olympics,sports
-"Taylor Swift ""Red (Taylor's Version)"" Tour",05/05/2024,Wembley Stadium, London,"Experience Taylor Swift's ""Red (Taylor's Version)"" tour",concert
-"Bruno Mars ""24K Magic"" Tour",04/15/2024,Hollywood Bowl, Los Angeles,"Experience Bruno Mars' ""24K Magic"" tour",concert
-Billie Eilish Live in Concert,05/02/2024,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
-"Katy Perry ""Witness"" Tour",04/29/2024,MGM Grand Garden Arena, Las Vegas,"Join Katy Perry on her ""Witness"" tour",concert
-Lana Del Rey Live in Concert,05/10/2024,Hollywood Bowl, Los Angeles,Get ready for Lana Del Rey's captivating show,concert
-"Adele ""30"" Tour",05/19/2024,Madison Square Garden, New York,"Experience Adele's ""30"" tour",concert
-"Coldplay ""Music of the Spheres"" Tour",05/30/2024,Hollywood Bowl, Los Angeles,"Join Coldplay on their ""Music of the Spheres"" tour",concert
-"Ed Sheeran ""Equals"" Tour",06/05/2024,Wembley Stadium, London,"Don't miss Ed Sheeran's ""Equals"" tour",concert
-"Justin Bieber ""Justice"" Tour",06/20/2024,Staples Center, Los Angeles,"Experience Justin Bieber's ""Justice"" tour",concert
-Lorde Live in Concert,07/02/2024,The O2 Arena, London,Don't miss Lorde's live performance,concert
-"Metallica ""WorldWired"" Tour",07/15/2024,MGM Grand Garden Arena, Las Vegas,Prepare for a night of heavy metal with Metallica,concert
-Shawn Mendes Live in Concert,07/25/2024,Hollywood Bowl, Los Angeles,Don't miss Shawn Mendes' live performance,concert
+6371,"The Weeknd ""After Hours"" Tour",11-25-2023,Hollywood Bowl,"Experience The Weeknd's ""After Hours"" tour",concert
+5396,MLB All-Star Game,07-03-2023,Coors Field,Baseball's brightest stars on one field,sports

@@ -27,6 +27,8 @@ global_schema = {
 app = Flask(__name__)
 df1 = pd.read_csv('concert_sports.csv')
 df2 = pd.read_csv('only_concert.csv')
+
+# Rename columns in df1
 column_mapping = {
     'event_id': 'e_id',
     'event_name': 'e_name',
@@ -38,18 +40,31 @@ column_mapping = {
 df1 = df1.rename(columns=column_mapping)
 df1['e_id'] = df1['e_id'].astype(str)
 
+# Concatenate DataFrames
 global_df = pd.concat([df1, df2], ignore_index=True)
 
+# Create a dictionary to store mapping between event names and event ids
+event_name_to_id = {}
+
+# Function for fuzzy merging
 def fuzzy_merge(row):
     e_name = row['e_name']
-    if pd.notna(e_name):  # Check if it's not NaN
-        matches = process.extractOne(e_name, global_df['e_name'].dropna())
-        if matches[1] >= 90:  # You can adjust the threshold as needed
-            return global_df[global_df['e_name'] == matches[0]]['e_id'].values[0]
-    return row['e_id']
+    if pd.notna(e_name):
+        if e_name not in event_name_to_id:
+            matches = process.extractOne(e_name, global_df['e_name'].dropna())
+            if matches[1] >= 90:
+                event_id = global_df[global_df['e_name'] == matches[0]]['e_id'].values[0]
+                event_name_to_id[e_name] = event_id
+            else:
+                event_id = None
+            event_name_to_id[e_name] = event_id
+        return event_name_to_id[e_name]
+    return None
 
+# Apply fuzzy merging
 global_df['e_id'] = global_df.apply(fuzzy_merge, axis=1)
 
+# Function for similarity score
 def similarity_score(row1, row2):
     e_name1 = str(row1['e_name']) if pd.notna(row1['e_name']) else ""
     e_name2 = str(row2['e_name']) if pd.notna(row2['e_name']) else ""
@@ -69,7 +84,6 @@ def similarity_score(row1, row2):
                 return None
         return None
 
-
     date1 = standardize_date(row1['event_date'])
     date2 = standardize_date(row2['event_date'])
     
@@ -80,13 +94,11 @@ def similarity_score(row1, row2):
     
     return name_similarity, place_similarity, date_similarity
 
-global_df = global_df.drop_duplicates(subset=['e_id'])
-
+# Reset index
 global_df.reset_index(drop=True, inplace=True)
 
-global_df = global_df.rename(columns={'e_category': 'Event_details', 'Unnamed: 6': 'event category'})
-
-global_df.to_csv('concert_data.csv', index=False)
+# Save all columns to CSV
+global_df.head(123).to_csv('concert_data.csv', index=False)
 
 
 
@@ -164,8 +176,8 @@ def combine_and_store_data():
             concert_event["e_id"],
             concert_event["e_name"],
             event_date,
+            concert_event["event_place"],
             concert_event["e_dest"],
-            concert_event["Event_details"],
             "Concert",
         )
         cursor.execute(insert_query, values)
@@ -285,7 +297,7 @@ def filter_events():
     return render_template(
         'index.html',
         events_data=filtered_events_data,
-        selected_category=selected_category,
+        selected_category='None',
         selected_location=selected_location,
         date_options=date_options,
         start_date=start_date_str,
