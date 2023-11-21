@@ -63,11 +63,12 @@ def similarity_score(row1, row2):
     def standardize_date(date_str):
         if isinstance(date_str, str):
             try:
-                date_obj = datetime.strptime(date_str, "%d/%m/%Y")
-                return date_obj.strftime("%d-%m-%Y")
+                date_obj = datetime.strptime(date_str, "%m-%d-%Y")
+                return date_obj.strftime("%Y-%m-%d %H:%M:%S")
             except ValueError:
                 return None
         return None
+
 
     date1 = standardize_date(row1['event_date'])
     date2 = standardize_date(row2['event_date'])
@@ -157,7 +158,7 @@ def combine_and_store_data():
 
     #Insert concert data into databse
     for concert_event in concert_data:
-        event_date = datetime.strptime(concert_event["event_date"], "%m/%d/%Y").strftime("%Y-%m-%d %H:%M:%S")
+        event_date = datetime.strptime(concert_event["event_date"], "%m-%d-%Y").strftime("%Y-%m-%d %H:%M:%S")
         insert_query = "INSERT INTO events (event_id, event_name, event_date, event_location, event_description, event_category) VALUES (%s, %s, %s, %s, %s, %s)"
         values = (
             concert_event["e_id"],
