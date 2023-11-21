@@ -1,35 +1,131 @@
-e_id,e_name,event_date,event_place,e_dest,e_category
-2395,Taylor Swift "Red (Taylor's Version)" Tour,05/05/2024,Wembley Stadium, London,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
-6793,Bruno Mars "24K Magic" Tour,04/15/2024,Hollywood Bowl, Los Angeles,Experience Bruno Mars' "24K Magic" tour,concert
-9845,Billie Eilish Live in Concert,05/02/2024,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
-6837,Katy Perry "Witness" Tour,04/29/2024,MGM Grand Garden Arena, Las Vegas,Join Katy Perry on her "Witness" tour,concert
-9848,Lana Del Rey Live in Concert,05/10/2024,Hollywood Bowl, Los Angeles,Get ready for Lana Del Rey's captivating show,concert
-9846,Adele "30" Tour,05/19/2024,Madison Square Garden, New York,Experience Adele's "30" tour,concert
-9847,Coldplay "Music of the Spheres" Tour,05/30/2024,Hollywood Bowl, Los Angeles,Join Coldplay on their "Music of the Spheres" tour,concert
-9849,Ed Sheeran "Equals" Tour,06/05/2024,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
-9850,Justin Bieber "Justice" Tour,06/20/2024,Staples Center, Los Angeles,Experience Justin Bieber's "Justice" tour,concert
-9851,Lorde Live in Concert,07/02/2024,The O2 Arena, London,Don't miss Lorde's live performance,concert
-9852,Metallica "WorldWired" Tour,07/15/2024,MGM Grand Garden Arena, Las Vegas,Prepare for a night of heavy metal with Metallica,concert
-9853,Shawn Mendes Live in Concert,07/25/2024,Hollywood Bowl, Los Angeles,Don't miss Shawn Mendes' live performance,concert
-9854,Taylor Swift "Red (Taylor's Version)" Tour,08/01/2024,Madison Square Garden, New York,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
-9856,Billie Eilish Live in Concert,08/29/2024,MGM Grand Garden Arena, Las Vegas,Get ready for Billie Eilish's captivating show,concert
-9857,Katy Perry "Witness" Tour,09/07/2024,Hollywood Bowl, Los Angeles,Join Katy Perry on her "Witness" tour,concert
-9858,Lana Del Rey Live in Concert,09/22/2024,The O2 Arena, London,Get ready for Lana Del Rey's captivating show,concert
-9859,Adele "30" Tour,10/05/2024,Staples Center, Los Angeles,Experience Adele's "30" tour,concert
-9860,Coldplay "Music of the Spheres" Tour,10/20/2024,MGM Grand Garden Arena, Las Vegas,Join Coldplay on their "Music of the Spheres" tour,concert
-9861,Ed Sheeran "Equals" Tour,11/03/2024,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
-9862,Justin Bieber "Justice" Tour,11/18/2024,Hollywood Bowl, Los Angeles,Experience Justin Bieber's "Justice" tour,concert
-9863,Lorde Live in Concert,12/02/2024,Madison Square Garden, New York,Don't miss Lorde's live performance,concert
-9864,Metallica "WorldWired" Tour,12/15/2024,Staples Center, Los Angeles,Prepare for a night of heavy metal with Metallica,concert
-9865,Shawn Mendes Live in Concert,12/30/2024,Wembley Stadium, London,Don't miss Shawn Mendes' live performance,concert
-9866,Taylor Swift "Red (Taylor's Version)" Tour,01/14/2025,MGM Grand Garden Arena, Las Vegas,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
-9867,Bruno Mars "24K Magic" Tour,01/29/2025,Hollywood Bowl, Los Angeles,Experience Bruno Mars' "24K Magic" tour,concert
-9868,Billie Eilish Live in Concert,02/12/2025,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
-9869,Katy Perry "Witness" Tour,02/27/2025,Wembley Stadium, London,Join Katy Perry on her "Witness" tour,concert
-9870,Lana Del Rey Live in Concert,03/14/2025,MGM Grand Garden Arena, Las Vegas,Get ready for Lana Del Rey's captivating show,concert
-9871,Adele "30" Tour,03/29/2025,Hollywood Bowl, Los Angeles,Experience Adele's "30" tour,concert
-9872,Coldplay "Music of the Spheres" Tour,04/12/2025,Staples Center, Los Angeles,Join Coldplay on their "Music of the Spheres" tour,concert
-9873,Ed Sheeran "Equals" Tour,04/27/2025,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
-9874,Justin Bieber "Justice" Tour,05/10/2025,MGM Grand Garden Arena, Las Vegas,Experience Justin Bieber's "Justice" tour,concert
-9875,Lorde Live in Concert,05/25/2025,Hollywood Bowl, Los Angeles,Don't miss Lorde's live performance,concert
-9876,Metallica "WorldWired" Tour,06/09/2025,Madison Square Garden, New York,Prepare for a night of heavy metal with Metallica,concert
+e_id,e_name,event_date,event_place,e_dest,Event_details
+7648,Taylor Swift Live in Concert,12-31-2023,Times Sq. ,Catch Taylor Swift live performing her new album,concert
+6584,Barcelona vs Real Madrid,11-23-2023,Camp Nou,Live action of El Cl?­sico,sports
+5432,Golden State Warriors vs Los Angeles Lakers,10-15-2023,Staples Center,Exciting NBA matchup between Warriors and Lakers,sports
+8912,Adele World Tour,09-20-2023,Madison Square Garden,Experience Adele's incredible live performance,concert
+7235,New York Yankees vs Boston Red Sox,07-07-2023,Yankee Stadium,Baseball rivalry at its finest,sports
+6321,Ed Sheeran Live in Concert,08-18-2023,Wembley Stadium,Don't miss Ed Sheeran's amazing show,concert
+9765,Super Bowl LVI,02-12-2023,SoFi Stadium,The biggest football event of the year,sports
+4587,"Coldplay ""Music of the Spheres"" Tour",06-30-2023,Rose Bowl,Enjoy Coldplay's latest tour,concert
+8642,Wimbledon Men's Final,07-09-2023,All England Club,The ultimate tennis championship,sports
+5643,"Beyonc?? ""Queen Bey"" Tour",04-25-2023,Mercedes-Benz Superdome,Queen Bey is back in town,concert
+2356,Chicago Cubs vs St. Louis Cardinals,06-15-2023,Wrigley Field,MLB showdown between Cubs and Cardinals,sports
+7890,John Legend Live in Concert,09-10-2023,Hollywood Bowl,An evening of soulful music with John Legend,concert
+3254,UEFA Champions League Final,05-27-2023,Stade de France,The battle for European soccer supremacy,sports
+4756,"Metallica ""WorldWired"" Tour",07-28-2023,AT&T Stadium,Prepare for a night of heavy metal with Metallica,concert
+7531,NBA All-Star Game,02-19-2023,Rocket Mortgage FieldHouse,The top NBA stars in one arena,sports
+6542,Katy Perry Live in Concert,11-15-2023,Madison Square Garden,Get ready for Katy Perry's electrifying show,concert
+9327,The Masters Golf Tournament,04-09-2023,Augusta National Golf Club,Witness golf's most prestigious event,sports
+8721,"Red Hot Chili Peppers ""Spice of Life"" Tour",08-02-2023,Hollywood Bowl,Experience RHCP's iconic music,concert
+3210,Indianapolis 500,05-28-2023,Indianapolis Motor Speedway,The greatest spectacle in racing,sports
+5258,Manchester United vs Liverpool,09-25-2023,Old Trafford,The historic English Premier League clash,sports
+3659,"Taylor Swift ""Fearless"" Tour",07-15-2023,AT&T Stadium,"Relive Taylor Swift's iconic ""Fearless"" era",concert
+9874,NFL Super Sunday,02-05-2023,Various Locations,The biggest day in American football,sports
+6324,Elton John Farewell Tour,04-03-2023,Madison Square Garden,Don't miss Elton John's farewell tour,concert
+2347,NCAA Men's Basketball Championship,04-03-2023,Caesar's Superdome,The battle for college basketball supremacy,sports
+2543,Los Angeles Lakers vs Miami Heat,03-15-2023,Staples Center,Exciting NBA showdown between Lakers and Heat,sports
+6712,Queen + Adam Lambert Concert,09-08-2023,Wembley Stadium,Experience Queen's legendary music,concert
+5981,World Series - Game 7,10-31-2023,Various Locations,The pinnacle of MLB championship,sports
+3189,"Taylor Swift ""Red"" Tour",06-10-2023,AT&T Stadium,"Relive Taylor Swift's iconic ""Red"" era",concert
+4178,US Open Tennis Championship,09-10-2023,USTA Billie Jean King National Tennis Center,The ultimate tennis Grand Slam,sports
+4823,"The Rolling Stones ""No Filter"" Tour",07-20-2023,Hard Rock Stadium,Don't miss The Rolling Stones on tour,concert
+7210,World Cup Final,12-18-2023,Lusail Iconic Stadium,The pinnacle of international soccer,sports
+2694,Harry Styles Live in Concert,08-05-2023,The O2 Arena,An unforgettable night with Harry Styles,concert
+5340,Stanley Cup Final - Game 7,06-17-2023,Various Locations,The battle for the NHL championship,sports
+8367,"Madonna ""Madame X"" Tour",11-12-2023,Madison Square Garden,"Madonna returns with the ""Madame X"" tour",concert
+1275,FIFA World Cup Final,12-10-2023,Al Bayt Stadium,The grand finale of world soccer,sports
+4098,"Green Day ""Hella Mega"" Tour",07-01-2023,Citi Field,Green Day, concert
+5723,NBA Finals - Game 7,06-30-2023,Various Locations,The ultimate showdown for the NBA championship,sports
+9201,Bruno Mars Live in Concert,10-28-2023,MGM Grand Garden Arena,Get ready for Bruno Mars' incredible show,concert
+3560,Formula 1 Grand Prix,11-19-2023,Interlagos Circuit,The pinnacle of Formula 1 racing,sports
+6829,"Celine Dion ""Courage"" World Tour",09-15-2023,Barclays Center,"Experience Celine Dion's ""Courage"" tour",concert
+2954,NFL Kickoff Game,09-07-2023,Arrowhead Stadium,The start of the NFL season with a spectacular game,sports
+8074,Justin Bieber Live in Concert,08-25-2023,Staples Center,Don't miss Justin Bieber's live performance,concert
+5396,MLB All-Star Game,07-10-2023,Dodger Stadium,Baseball's brightest stars on one field,sports
+3982,NHL Stanley Cup Final - Game 7,06-15-2023,Various Locations,The battle for the NHL championship,sports
+5790,"Pink Floyd ""Endless River"" Tour",10-05-2023,O2 Arena,Relive Pink Floyd's legendary music,concert
+1247,Summer Olympics Opening Ceremony,07-21-2023,Los Angeles Memorial Coliseum,The grand kickoff of the Summer Olympics,sports
+7123,Tom Hanks and The Heartbreakers Concert,09-28-2023,Hollywood Bowl,A night of classic rock with Tom Hanks,concert
+4268,NASCAR Daytona 500,02-19-2023,Daytona International Speedway,The Great American Race in NASCAR,sports
+6371,"The Weeknd ""After Hours"" Tour",08-12-2023,Mercedes-Benz Stadium,"Experience The Weeknd's ""After Hours"" tour",concert
+8952,Wimbledon Women's Final,07-08-2023,All England Club,The ultimate showdown in women's tennis,sports
+1746,"U2 ""Experience + Innocence"" Tour",11-02-2023,TD Garden,Experience U2's latest tour,concert
+5624,Ryder Cup,09-24-2023,Wisconsin Golf Club,The prestigious golf tournament, sports
+7419,Demi Lovato Live in Concert,10-10-2023,The Forum,Don't miss Demi Lovato's live performance,concert
+2598,MLB World Series - Game 7,10-25-2023,Various Locations,The pinnacle of MLB championship,sports
+6271,"AC/DC ""Power Up"" Tour",05-20-2023,Madison Square Garden,Prepare for a rock 'n' roll night with AC/DC,concert
+3279,Summer Paralympics Closing Ceremony,09-10-2023,Los Angeles Memorial Coliseum,The grand finale of the Summer Paralympics,sports
+9812,"Elton John ""Farewell Yellow Brick Road"" Tour",12-01-2023,Staples Center,Elton John bids farewell on his final tour,concert
+4820,FIFA Women's World Cup Final,12-17-2023,Soldier Field,The grand finale of women's soccer,sports
+6823,"Muse ""Simulation Theory"" Tour",08-19-2023,Hollywood Bowl,"Experience Muse's ""Simulation Theory"" tour",concert
+5312,NFL Pro Bowl,01-29-2023,Allegiant Stadium,The NFL's best players face off in the Pro Bowl,sports
+2146,Billie Eilish Live in Concert,11-30-2023,Madison Square Garden,Get ready for Billie Eilish's captivating show,concert
+7493,NHL Winter Classic,01-01-2023,Target Field,The outdoor hockey extravaganza,sports
+3027,Andrea Bocelli Live in Concert,07-22-2023,Hollywood Bowl,An evening of opera and classical music with Andrea Bocelli,concert
+9863,Super Rugby Final,07-29-2023,Eden Park,The climax of Super Rugby,sports
+7841,"Bruno Mars ""24K Magic"" Tour",09-16-2023,BB&T Center,"Experience Bruno Mars' ""24K Magic"" tour",concert
+5439,Summer Paralympics Opening Ceremony,08-26-2023,Los Angeles Memorial Coliseum,The grand kickoff of the Summer Paralympics,sports
+2574,Shawn Mendes Live in Concert,11-18-2023,Staples Center,Don't miss Shawn Mendes' live performance,concert
+7432,MLB Opening Day,04-06-2023,Various Ballparks,The start of the MLB season with exciting games,sports
+5610,"The Who ""Moving On!"" Tour",10-14-2023,The Forum,"Experience The Who's ""Moving On!"" tour",concert
+4319,UFC 275,07-08-2023,Toyota Center,The top MMA fighters face off in UFC 275,sports
+6071,Lana Del Rey Live in Concert,09-02-2023,Hollywood Bowl,Get ready for Lana Del Rey's captivating show,concert
+2985,NHL Entry Draft,06-23-2023,Prudential Center,The future stars of the NHL are drafted,sports
+8723,Madison Square Garden Classic,12-17-2023,Madison Square Garden,College basketball action at MSG,sports
+5270,"Foo Fighters ""Medicine at Midnight"" Tour",08-08-2023,Caesars Palace,Rock out with the Foo Fighters,concert
+7193,NCAA Women's Final Four,04-01-2023,MGM Grand Garden Arena,The pinnacle of women's college basketball,sports
+1257,Kendrick Lamar Live in Concert,11-28-2023,The O2 Arena,Don't miss Kendrick Lamar's explosive show,concert
+3648,Summer X Games,07-13-2023,US Bank Stadium,The extreme sports extravaganza,sports
+8904,"Eric Clapton ""Slowhand"" Tour",10-21-2023,Hollywood Bowl,"Experience Eric Clapton's ""Slowhand"" tour",concert
+2371,NFL Draft,04-27-2023,Lucas Oil Stadium,The NFL's annual player selection event,sports
+6791,"Harry Styles ""Love On Tour"" Concert",09-01-2023,MGM Grand Garden Arena,"Join Harry Styles on his ""Love On Tour",concert
+5287,Summer Youth Olympics Opening Ceremony,08-11-2023,Los Angeles Memorial Coliseum,The grand kickoff of the Summer Youth Olympics,sports
+2190,NHL All-Star Game,01-29-2023,T-Mobile Arena,The NHL's top stars compete in the All-Star Game,sports
+6501,Justin Timberlake Live in Concert,10-02-2023,Madison Square Garden,Get ready for Justin Timberlake's electrifying show,concert
+8456,MLB Home Run Derby,07-10-2023,Dodger Stadium,The power hitters compete in the Home Run Derby,sports
+3769,"Coldplay ""A Head Full of Dreams"" Tour",05-10-2023,MetLife Stadium,"Relive Coldplay's ""A Head Full of Dreams"" tour",concert
+5724,Summer Paralympics Athletics,09-02-2023,LA Memorial Coliseum,Track and field action at the Summer Paralympics,sports
+9831,"Fleetwood Mac ""An Evening with Fleetwood Mac"" Tour",08-27-2023,Hollywood Bowl,Experience Fleetwood Mac's iconic music,concert
+4310,College Football National Championship,01-09-2023,Lucas Oil Stadium,The pinnacle of college football,sports
+6123,Lizzo Live in Concert,09-09-2023,The Forum,Join Lizzo for an unforgettable live performance,concert
+2576,Formula E Championship,07-15-2023,Brooklyn Street Circuit,The future of electric car racing,sports
+7240,"Pearl Jam ""Gigaton"" Tour",05-20-2023,Hard Rock Stadium,"Rock out with Pearl Jam on their ""Gigaton"" tour",concert
+5281,NBA Draft,06-22-2023,Barclays Center,The NBA's annual player selection event,sports
+9432,The Chainsmokers Live in Concert,10-14-2023,Hollywood Bowl,Don't miss The Chainsmokers' high-energy show,concert
+3267,Summer Olympics Athletics,07-29-2023,LA Memorial Coliseum,The pinnacle of track and field at the Summer Olympics,sports
+8934,"Kiss ""End of the Road"" Tour",08-05-2023,Mercedes-Benz Stadium,Experience Kiss on their farewell tour,concert
+4790,Summer Paralympics Swimming,09-04-2023,USC Uytengsu Aquatics Center,Swimming action at the Summer Paralympics,sports
+6251,James Taylor Live in Concert,10-01-2023,Hollywood Bowl,An evening of classic tunes with James Taylor,concert
+2185,US Open Golf Championship,06-18-2023,Los Angeles Country Club,Witness golf's prestigious major,sports
+8573,"Shania Twain ""Let's Go!"" Tour",09-16-2023,T-Mobile Arena,"Get ready for Shania Twain's ""Let's Go!"" tour",concert
+3904,Summer Olympics Gymnastics,07-24-2023,Staples Center,The artistry of gymnastics at the Summer Olympics,sports
+4283,Summer Paralympics Wheelchair Basketball,09-05-2023,LA Convention Center,Wheelchair basketball action at the Summer Paralympics,sports
+2186,MLB World Series - Game 1,10-17-2023,Various Locations,The start of the MLB World Series,sports
+7623,Ariana Grande Live in Concert,08-30-2023,Staples Center,Get ready for Ariana Grande's powerhouse performance,concert
+5290,Summer Olympics Closing Ceremony,08-06-2023,LA Memorial Coliseum,The grand finale of the Summer Olympics,sports
+3985,John Mayer Live in Concert,10-29-2023,The O2 Arena,An unforgettable night with John Mayer,concert
+6287,MLB World Series - Game 4,10-24-2023,Various Locations,The MLB World Series continues with Game 4,sports
+5295,NFL International Series,11-05-2023,Tottenham Hotspur Stadium,The NFL comes to London for exciting matchups,sports
+5413,"Billie Eilish ""Happier Than Ever"" Tour",11-10-2023,Hollywood Bowl,"Experience Billie Eilish's ""Happier Than Ever"" tour",concert
+4235,Summer Paralympics Wheelchair Tennis,09-06-2023,LA Tennis Center,Wheelchair tennis action at the Summer Paralympics,sports
+6520,"Pink ""Beautiful Trauma"" Tour",10-08-2023,Madison Square Garden,"Join Pink on her ""Beautiful Trauma"" tour",concert
+9817,World Series of Poker Main Event,07-01-2023,Rio All-Suite Hotel and Casino,The ultimate poker championship,sports
+5299,ACM Awards,04-09-2023,Allegiant Stadium,The Academy of Country Music Awards honor the best in country music,sports
+8210,Dave Matthews Band Live in Concert,09-22-2023,Hollywood Bowl,A night of music with Dave Matthews Band,concert
+2156,NHL Draft,06-24-2023,Prudential Center,The NHL's annual player selection event,sports
+9785,Kacey Musgraves Live in Concert,11-17-2023,The Forum,Don't miss Kacey Musgraves' live performance,concert
+3297,Summer Paralympics Archery,09-07-2023,El Dorado Park,Archery competition at the Summer Paralympics,sports
+4385,UFC 276,08-19-2023,TD Garden,The top MMA fighters face off in UFC 276,sports
+8724,Summer Olympics Synchronized Swimming,07-29-2023,Uytengsu Aquatics Center,Synchronized swimming at the Summer Olympics,sports
+"Taylor Swift ""Red (Taylor's Version)"" Tour",05/05/2024,Wembley Stadium, London,"Experience Taylor Swift's ""Red (Taylor's Version)"" tour",concert
+"Bruno Mars ""24K Magic"" Tour",04/15/2024,Hollywood Bowl, Los Angeles,"Experience Bruno Mars' ""24K Magic"" tour",concert
+Billie Eilish Live in Concert,05/02/2024,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
+"Katy Perry ""Witness"" Tour",04/29/2024,MGM Grand Garden Arena, Las Vegas,"Join Katy Perry on her ""Witness"" tour",concert
+Lana Del Rey Live in Concert,05/10/2024,Hollywood Bowl, Los Angeles,Get ready for Lana Del Rey's captivating show,concert
+"Adele ""30"" Tour",05/19/2024,Madison Square Garden, New York,"Experience Adele's ""30"" tour",concert
+"Coldplay ""Music of the Spheres"" Tour",05/30/2024,Hollywood Bowl, Los Angeles,"Join Coldplay on their ""Music of the Spheres"" tour",concert
+"Ed Sheeran ""Equals"" Tour",06/05/2024,Wembley Stadium, London,"Don't miss Ed Sheeran's ""Equals"" tour",concert
+"Justin Bieber ""Justice"" Tour",06/20/2024,Staples Center, Los Angeles,"Experience Justin Bieber's ""Justice"" tour",concert
+Lorde Live in Concert,07/02/2024,The O2 Arena, London,Don't miss Lorde's live performance,concert
+"Metallica ""WorldWired"" Tour",07/15/2024,MGM Grand Garden Arena, Las Vegas,Prepare for a night of heavy metal with Metallica,concert
+Shawn Mendes Live in Concert,07/25/2024,Hollywood Bowl, Los Angeles,Don't miss Shawn Mendes' live performance,concert

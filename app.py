@@ -7,7 +7,7 @@ from deepdiff import DeepDiff
 import mysql.connector
 from datetime import datetime, timedelta
 from fuzzywuzzy.process import fuzz, extractOne
-
+from fuzzywuzzy import process
     # Define the MySQL database connection parameters
 db_config = {
     "host": "localhost",
@@ -27,25 +27,34 @@ global_schema = {
 app = Flask(__name__)
 df1 = pd.read_csv('concert_sports.csv')
 df2 = pd.read_csv('only_concert.csv')
-df1 = df1.rename(columns=global_schema)
-df2 = df2.rename(columns=global_schema)
-# Merging  the two DataFrames into a single DataFrame using an outer join
-global_df = pd.merge(df1, df2, how='outer')
+column_mapping = {
+    'event_id': 'e_id',
+    'event_name': 'e_name',
+    'event_date': 'event_date',
+    'event_location': 'event_place',
+    'event_description': 'e_dest',
+    'event_category': 'e_category'
+}
+df1 = df1.rename(columns=column_mapping)
+df1['e_id'] = df1['e_id'].astype(str)
+
+global_df = pd.concat([df1, df2], ignore_index=True)
 
 def fuzzy_merge(row):
-    e_name = row['event_name']
+    e_name = row['e_name']
     if pd.notna(e_name):  # Check if it's not NaN
-        matches = process.extractOne(e_name, global_df['event_name'].dropna())
+        matches = process.extractOne(e_name, global_df['e_name'].dropna())
         if matches[1] >= 90:  # You can adjust the threshold as needed
-            return global_df[global_df['event_name'] == matches[0]]['event_id'].values[0]
-    return row['event_id']
+            return global_df[global_df['e_name'] == matches[0]]['e_id'].values[0]
+    return row['e_id']
 
-global_df['event_id'] = global_df.apply(fuzzy_merge, axis=1)
+global_df['e_id'] = global_df.apply(fuzzy_merge, axis=1)
+
 def similarity_score(row1, row2):
-    e_name1 = str(row1['event_name']) if pd.notna(row1['event_name']) else ""
-    e_name2 = str(row2['event_name']) if pd.notna(row2['event_name']) else ""
-    event_place1 = str(row1['event_location']) if pd.notna(row1['event_location']) else ""
-    event_place2 = str(row2['event_location']) if pd.notna(row2['event_location']) else ""
+    e_name1 = str(row1['e_name']) if pd.notna(row1['e_name']) else ""
+    e_name2 = str(row2['e_name']) if pd.notna(row2['e_name']) else ""
+    event_place1 = str(row1['event_place']) if pd.notna(row1['event_place']) else ""
+    event_place2 = str(row2['event_place']) if pd.notna(row2['event_place']) else ""
     
     name_similarity = fuzz.ratio(e_name1, e_name2)
     place_similarity = fuzz.ratio(event_place1, event_place2)
@@ -69,10 +78,15 @@ def similarity_score(row1, row2):
         date_similarity = 0
     
     return name_similarity, place_similarity, date_similarity
-global_df = global_df.drop_duplicates(subset=['event_id'])
+
+global_df = global_df.drop_duplicates(subset=['e_id'])
+
 global_df.reset_index(drop=True, inplace=True)
-global_df = global_df.rename(columns={'event_category': 'Event_details', 'Unnamed: 6': 'event category'})
-global_df.to_csv('concert.csv', index=False)
+
+global_df = global_df.rename(columns={'e_category': 'Event_details', 'Unnamed: 6': 'event category'})
+
+global_df.to_csv('concert_data.csv', index=False)
+
 
 
 def combine_and_store_data():
@@ -150,7 +164,7 @@ def combine_and_store_data():
             concert_event["e_name"],
             event_date,
             concert_event["e_dest"],
-            concert_event["e_category"],
+            concert_event["Event_details"],
             "Concert",
         )
         cursor.execute(insert_query, values)
@@ -207,7 +221,7 @@ def compare_e_ids_csv(main_file_path, temp_file_path):
     temp_file = pd.read_csv(temp_file_path)
 
     # Find differences in event IDs
-    differences = set(temp_file['e_id']).difference(set(main_file['e_id']))
+    differences = set(temp_file['e_id']).symmetric_difference(set(main_file['e_id']))
 
     if differences:
         shutil.copyfile(main_file_path, temp_file_path)

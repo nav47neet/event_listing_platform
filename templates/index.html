@@ -1,147 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-top: 20px;
-        }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+      }
 
-        form {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: none;
-            width: 70%;
-            max-width: 500px;
-            box-sizing: border-box;
-        }
+      form {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        width: 70%;
+        max-width: 500px;
+        box-sizing: border-box;
+      }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-        }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
 
-        select, input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
+      select,
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
 
-        button {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            box-sizing: border-box;
-        }
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        box-sizing: border-box;
+      }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
 
-        th {
-            background-color: #4caf50;
-            color: #fff;
-        }
+      th {
+        background-color: #4caf50;
+        color: #fff;
+      }
 
-        .filter-btn {
-            background-color: #337ab7;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+      .filter-btn {
+        background-color: #337ab7;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Events Listing Platform</h1>
 
     <button class="filter-btn" onclick="toggleFilters()">Show Filters</button>
 
     <form method="post" action="{{ url_for('filter_events') }}">
-        <label for="category">Select Category:</label>
-        <select name="category" id="category">
-            <option value="None">None</option>
-            <option value="Football">Football</option>
-            <option value="Basketball">Basketball</option>
-            <!-- Add more options for other categories if needed -->
-        </select>
+      <label for="category">Select Category:</label>
+      <select name="category" id="category">
+        <option value="None">None</option>
+        <option value="Football">Football</option>
+        <option value="Basketball">Basketball</option>
+        <option value="Concert">Concert</option>
+      </select>
 
-        <label for="location">Select Location:</label>
-        <select name="location" id="location">
-            <option value="None">None</option>
-            {% for location in locations %}
-                <option value="{{ location }}">{{ location }}</option>
-            {% endfor %}
-        </select>
+      <label for="location">Select Location:</label>
+      <select name="location" id="location">
+        <option value="None">None</option>
+        {% for location in locations|sort %}
+        <option value="{{ location }}">{{ location }}</option>
+        {% endfor %}
+      </select>
 
-        <label for="start_date">Start Date:</label>
-        <input type="date" name="start_date" id="start_date">
+      <label for="start_date">Start Date:</label>
+      <input type="date" name="start_date" id="start_date" />
 
-        <label for="end_date">End Date:</label>
-        <input type="date" name="end_date" id="end_date">
+      <label for="end_date">End Date:</label>
+      <input type="date" name="end_date" id="end_date" />
 
-        <button type="submit">Filter</button>
+      <button type="submit">Filter</button>
     </form>
 
     <table>
-        <tr>
-            <th>Serial Number</th>
-            <th>Event Name</th>
-            <th>Event Date</th>
-            <th>Event Location</th>
-            <th>Event Description</th>
-            <th>Event Category</th>
-        </tr>
-        {% for event in events_data %}
-        <tr>
-            <td>{{ loop.index }}</td>
-            <td>{{ event[1] }}</td>
-            <td>{{ event[2] }}</td>
-            <td>{{ event[3] }}</td>
-            <td>{{ event[4] }}</td>
-            <td>{{ event[5] }}</td>
-        </tr>
-        {% endfor %}
+      <tr>
+        <th>Serial Number</th>
+        <th>Event Name</th>
+        <th>Event Date</th>
+        <th>Event Location</th>
+        <th>Event Description</th>
+        <th>Event Category</th>
+      </tr>
+      {% for event in events_data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ event[1] }}</td>
+        <td>{{ event[2] }}</td>
+        <td>{{ event[3] }}</td>
+        <td>{{ event[4] }}</td>
+        <td>{{ event[5] }}</td>
+      </tr>
+      {% endfor %}
     </table>
 
     <script>
-        function toggleFilters() {
-            var form = document.querySelector('form');
-            form.style.display = form.style.display === 'none' ? 'block' : 'none';
-        }
+      function toggleFilters() {
+        var form = document.querySelector("form");
+        form.style.display = form.style.display === "none" ? "block" : "none";
+      }
     </script>
-</body>
+  </body>
 </html>
