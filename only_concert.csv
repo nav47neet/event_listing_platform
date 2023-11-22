@@ -1,35 +1,35 @@
 e_id,e_name,event_date,event_place,e_dest,e_category
-2395,Taylor Swift "Red (Taylor's Version)" Tour,05/05/2024,Wembley Stadium, London,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
-6793,Bruno Mars "24K Magic" Tour,04/15/2024,Hollywood Bowl, Los Angeles,Experience Bruno Mars' "24K Magic" tour,concert
-9845,Billie Eilish Live in Concert,05/02/2024,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
-6837,Katy Perry "Witness" Tour,04/29/2024,MGM Grand Garden Arena, Las Vegas,Join Katy Perry on her "Witness" tour,concert
-9848,Lana Del Rey Live in Concert,05/10/2024,Hollywood Bowl, Los Angeles,Get ready for Lana Del Rey's captivating show,concert
-9846,Adele "30" Tour,05/19/2024,Madison Square Garden, New York,Experience Adele's "30" tour,concert
-9847,Coldplay "Music of the Spheres" Tour,05/30/2024,Hollywood Bowl, Los Angeles,Join Coldplay on their "Music of the Spheres" tour,concert
-9849,Ed Sheeran "Equals" Tour,06/05/2024,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
-9850,Justin Bieber "Justice" Tour,06/20/2024,Staples Center, Los Angeles,Experience Justin Bieber's "Justice" tour,concert
-9851,Lorde Live in Concert,07/02/2024,The O2 Arena, London,Don't miss Lorde's live performance,concert
-9852,Metallica "WorldWired" Tour,07/15/2024,MGM Grand Garden Arena, Las Vegas,Prepare for a night of heavy metal with Metallica,concert
-9853,Shawn Mendes Live in Concert,07/25/2024,Hollywood Bowl, Los Angeles,Don't miss Shawn Mendes' live performance,concert
-9854,Taylor Swift "Red (Taylor's Version)" Tour,08/01/2024,Madison Square Garden, New York,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
-9856,Billie Eilish Live in Concert,08/29/2024,MGM Grand Garden Arena, Las Vegas,Get ready for Billie Eilish's captivating show,concert
-9857,Katy Perry "Witness" Tour,09/07/2024,Hollywood Bowl, Los Angeles,Join Katy Perry on her "Witness" tour,concert
-9858,Lana Del Rey Live in Concert,09/22/2024,The O2 Arena, London,Get ready for Lana Del Rey's captivating show,concert
-9859,Adele "30" Tour,10/05/2024,Staples Center, Los Angeles,Experience Adele's "30" tour,concert
-9860,Coldplay "Music of the Spheres" Tour,10/20/2024,MGM Grand Garden Arena, Las Vegas,Join Coldplay on their "Music of the Spheres" tour,concert
-9861,Ed Sheeran "Equals" Tour,11/03/2024,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
-9862,Justin Bieber "Justice" Tour,11/18/2024,Hollywood Bowl, Los Angeles,Experience Justin Bieber's "Justice" tour,concert
-9863,Lorde Live in Concert,12/02/2024,Madison Square Garden, New York,Don't miss Lorde's live performance,concert
-9864,Metallica "WorldWired" Tour,12/15/2024,Staples Center, Los Angeles,Prepare for a night of heavy metal with Metallica,concert
-9865,Shawn Mendes Live in Concert,12/30/2024,Wembley Stadium, London,Don't miss Shawn Mendes' live performance,concert
-9866,Taylor Swift "Red (Taylor's Version)" Tour,01/14/2025,MGM Grand Garden Arena, Las Vegas,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
-9867,Bruno Mars "24K Magic" Tour,01/29/2025,Hollywood Bowl, Los Angeles,Experience Bruno Mars' "24K Magic" tour,concert
-9868,Billie Eilish Live in Concert,02/12/2025,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
-9869,Katy Perry "Witness" Tour,02/27/2025,Wembley Stadium, London,Join Katy Perry on her "Witness" tour,concert
-9870,Lana Del Rey Live in Concert,03/14/2025,MGM Grand Garden Arena, Las Vegas,Get ready for Lana Del Rey's captivating show,concert
-9871,Adele "30" Tour,03/29/2025,Hollywood Bowl, Los Angeles,Experience Adele's "30" tour,concert
-9872,Coldplay "Music of the Spheres" Tour,04/12/2025,Staples Center, Los Angeles,Join Coldplay on their "Music of the Spheres" tour,concert
-9873,Ed Sheeran "Equals" Tour,04/27/2025,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
-9874,Justin Bieber "Justice" Tour,05/10/2025,MGM Grand Garden Arena, Las Vegas,Experience Justin Bieber's "Justice" tour,concert
-9875,Lorde Live in Concert,05/25/2025,Hollywood Bowl, Los Angeles,Don't miss Lorde's live performance,concert
-9876,Metallica "WorldWired" Tour,06/09/2025,Madison Square Garden, New York,Prepare for a night of heavy metal with Metallica,concert
+2395,Taylor Swift "Red (Taylor's Version)" Tour,05/05/2024 13:45,Wembley Stadium, London,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
+6793,Bruno Mars "24K Magic" Tour,04/15/2024 2:00,Hollywood Bowl, Los Angeles,Experience Bruno Mars' "24K Magic" tour,concert
+9845,Billie Eilish Live in Concert,05/02/2024 9:00,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
+6837,Katy Perry "Witness" Tour,04/29/2024 8:45,MGM Grand Garden Arena, Las Vegas,Join Katy Perry on her "Witness" tour,concert
+9848,Lana Del Rey Live in Concert,05/10/2024 14:55,Hollywood Bowl, Los Angeles,Get ready for Lana Del Rey's captivating show,concert
+9846,Adele "30" Tour,05/19/2024 12:00,Madison Square Garden, New York,Experience Adele's "30" tour,concert
+9847,Coldplay "Music of the Spheres" Tour,05/30/2024 15:30,Hollywood Bowl, Los Angeles,Join Coldplay on their "Music of the Spheres" tour,concert
+9849,Ed Sheeran "Equals" Tour,06/05/2024 23:00,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
+9850,Justin Bieber "Justice" Tour,06/20/2024 00:00,Staples Center, Los Angeles,Experience Justin Bieber's "Justice" tour,concert
+9851,Lorde Live in Concert,07/02/2024 15:30,The O2 Arena, London,Don't miss Lorde's live performance,concert
+9852,Metallica "WorldWired" Tour,07/15/2024 23:00,MGM Grand Garden Arena, Las Vegas,Prepare for a night of heavy metal with Metallica,concert
+9853,Shawn Mendes Live in Concert,07/25/2024 16:00,Hollywood Bowl, Los Angeles,Don't miss Shawn Mendes' live performance,concert
+9854,Taylor Swift "Red (Taylor's Version)" Tour,08/01/2024 15:00,Madison Square Garden, New York,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
+9856,Billie Eilish Live in Concert,08/29/2024 17:00,MGM Grand Garden Arena, Las Vegas,Get ready for Billie Eilish's captivating show,concert
+9857,Katy Perry "Witness" Tour,09/07/2024 17:30,Hollywood Bowl, Los Angeles,Join Katy Perry on her "Witness" tour,concert
+9858,Lana Del Rey Live in Concert,09/22/2024 4:00,The O2 Arena, London,Get ready for Lana Del Rey's captivating show,concert
+9859,Adele "30" Tour,10/05/2024 23:00,Staples Center, Los Angeles,Experience Adele's "30" tour,concert
+9860,Coldplay "Music of the Spheres" Tour,10/20/2024 23:00,MGM Grand Garden Arena, Las Vegas,Join Coldplay on their "Music of the Spheres" tour,concert
+9861,Ed Sheeran "Equals" Tour,11/03/2024 00:00,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
+9862,Justin Bieber "Justice" Tour,11/18/2024 17:30,Hollywood Bowl, Los Angeles,Experience Justin Bieber's "Justice" tour,concert
+9863,Lorde Live in Concert,12/02/2024 23:00,Madison Square Garden, New York,Don't miss Lorde's live performance,concert
+9864,Metallica "WorldWired" Tour,12/15/2024 17:30,Staples Center, Los Angeles,Prepare for a night of heavy metal with Metallica,concert
+9865,Shawn Mendes Live in Concert,12/30/2024 17:30,Wembley Stadium, London,Don't miss Shawn Mendes' live performance,concert
+9866,Taylor Swift "Red (Taylor's Version)" Tour,01/14/2025 00:00,MGM Grand Garden Arena, Las Vegas,Experience Taylor Swift's "Red (Taylor's Version)" tour,concert
+9867,Bruno Mars "24K Magic" Tour,01/29/2025 00:00,Hollywood Bowl, Los Angeles,Experience Bruno Mars' "24K Magic" tour,concert
+9868,Billie Eilish Live in Concert,02/12/2025 23:00,The O2 Arena, London,Get ready for Billie Eilish's captivating show,concert
+9869,Katy Perry "Witness" Tour,02/27/2025 17:30,Wembley Stadium, London,Join Katy Perry on her "Witness" tour,concert
+9870,Lana Del Rey Live in Concert,03/14/2025 00:00,MGM Grand Garden Arena, Las Vegas,Get ready for Lana Del Rey's captivating show,concert
+9871,Adele "30" Tour,03/29/2025 23:00,Hollywood Bowl, Los Angeles,Experience Adele's "30" tour,concert
+9872,Coldplay "Music of the Spheres" Tour,04/12/2025 17:30,Staples Center, Los Angeles,Join Coldplay on their "Music of the Spheres" tour,concert
+9873,Ed Sheeran "Equals" Tour,04/27/2025 00:00,Wembley Stadium, London,Don't miss Ed Sheeran's "Equals" tour,concert
+9874,Justin Bieber "Justice" Tour,05/10/2025 23:00,MGM Grand Garden Arena, Las Vegas,Experience Justin Bieber's "Justice" tour,concert
+9875,Lorde Live in Concert,05/25/2025 17:30,Hollywood Bowl, Los Angeles,Don't miss Lorde's live performance,concert
+9876,Metallica "WorldWired" Tour,06/09/2025 00:00,Madison Square Garden, New York,Prepare for a night of heavy metal with Metallica,concert
