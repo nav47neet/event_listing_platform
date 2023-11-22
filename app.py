@@ -8,6 +8,7 @@ import mysql.connector
 from datetime import datetime, timedelta
 from fuzzywuzzy.process import fuzz, extractOne
 from fuzzywuzzy import process
+
     # Define the MySQL database connection parameters
 db_config = {
     "host": "localhost",
@@ -178,7 +179,7 @@ def combine_and_store_data():
             event_date,
             concert_event["event_place"],
             concert_event["e_dest"],
-            "Concert",
+            concert_event["e_category"],
         )
         cursor.execute(insert_query, values)
         conn.commit()
@@ -241,6 +242,8 @@ def compare_e_ids_csv(main_file_path, temp_file_path):
 
     return not bool(differences)
 
+
+
 @app.route("/filter_events", methods=["POST"])
 def filter_events():
     # Connect to the database
@@ -297,7 +300,7 @@ def filter_events():
     return render_template(
         'index.html',
         events_data=filtered_events_data,
-        selected_category='None',
+        selected_category=selected_category,
         selected_location=selected_location,
         date_options=date_options,
         start_date=start_date_str,
@@ -325,7 +328,6 @@ def show_events():
     # Pass the data and locations to the template
     return render_template('index.html', events_data=events_data, locations=locations)
 
-
 @app.route("/")
 def index():
     main_file_path_f = 'football_data.csv'
@@ -341,14 +343,32 @@ def index():
     result_basketball = compare_event_ids_json(main_file_path_b, temp_file_path_b)
     result_concert = compare_e_ids_csv(main_file_path_c, temp_file_path_c)
 
-    #if result_basketball is False or result_football is False or result_concert is False:
-    combine_and_store_data()
+    # Check if any of the data files has changed, and if so, combine and store data
+    if result_basketball is False or result_football is False or result_concert is False:
+        combine_and_store_data()
+
+    # Fetch all data from the events table
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+
+    # Fetch data from the events table
+    select_query = "SELECT * FROM events"
+    cursor.execute(select_query)
+    events_data = cursor.fetchall()
+
+    # Close the database connection
+    cursor.close()
+    conn.close()
+
+    print("Events Data:", events_data)  # Print the fetched data to the console for debugging
 
     today = datetime.today()
     date_options = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(30)]
 
-    locations = get_locations()  # Add this line
-    return render_template('index.html', events_data=[], selected_category=None, date_options=date_options, locations=locations)
+    locations = get_locations()  # Assuming you have this function implemented
+    return render_template('index.html', events_data=events_data, selected_category=None, date_options=date_options, locations=locations)
+
+
 
 
 @app.route('/favicon.ico')
